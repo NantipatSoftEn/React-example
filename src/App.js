@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Footer from  './set/Footer';
 import Header from  './set/Header';
 import Content from  './set/Content';
-
 import './App.css';
 
 class App extends Component {
