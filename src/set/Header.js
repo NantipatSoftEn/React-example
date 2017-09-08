@@ -14,8 +14,10 @@ class Header extends Component
 
         return (
             <div>
-                <h1>Headdfdf</h1>
+                <h1>Wait  2 sec Show mes</h1>
                 <h2>{this.state.name }</h2>
+                <h2>{this.state.count }</h2>
+
             </div>
         );
     }

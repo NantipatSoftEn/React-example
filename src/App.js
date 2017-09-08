@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Footer from  './Footer';
-import Header from  './Header';
-import Content from  './Content';
+import Footer from  './set/Footer';
+import Header from  './set/Header';
+import Content from  './set/Content';
 
 import './App.css';
 
@@ -11,7 +11,7 @@ class App extends Component {
       <div>
         <Footer/>
         <Header/>
-        <Content name="Dsddd"/>
+        <Content name="Send value form App.js" tile="this is title"/>
         <Footer/>
       </div>
     );
