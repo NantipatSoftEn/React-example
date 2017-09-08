@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-
 class Content extends Component
 {
     render()
@@ -11,7 +9,7 @@ class Content extends Component
                 <p>{this.props.title}</p>
                 <p>{this.props.name}</p>
             </div>
-        
+
 
         );
     }
