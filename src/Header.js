@@ -10,7 +10,7 @@ class Header extends Component
     }
     render(){
         setTimeout(()=>this.setState({name:"React"}),2000);
-        setInterval(()=>this.setState({title:this.state.count+1},100 );
+        setInterval(()=>this.setState({title:this.state.count+1}),100 );
 
         return (
             <div>
