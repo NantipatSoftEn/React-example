@@ -29,30 +29,37 @@
 // document.getElementById('root'));﻿
 // registerServiceWorker();
 import {createStore} from "redux";
-
-const reducder = (state,action)=>{
+const inttailState = {
+    result:15000,
+    value:[]
+}
+const reducder = (state = inttailState,action)=>{
     switch (action.type) {
         case "ADD":
-            state += action.playload;
+            //state += action.playload;
+            state ={
+                result:state.result+=action.playload,
+            }
         break;
         case "SUBTRACK":
-            state -= action.playload;
+            //state -= action.playload;
         break;
         default:
 
     }
     return state;
 }
-const store = createStore(reducder ,15000);
+//const store = createStore(reducder ,15000);
+const store = createStore(reducder  );
 store.subscribe(function(){
     console.log("Update Store",store.getState());
 });
 
 store.dispatch({
     type:"ADD",
-    playload:500
+    playload:15000
 });
-store.dispatch({
-    type:"SUBTRACK",
-    playload:10000
-});
+// store.dispatch({
+//     type:"SUBTRACK",
+//     playload:10000
+// });
