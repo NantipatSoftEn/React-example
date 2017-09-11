@@ -52,3 +52,7 @@ store.dispatch({
     type:"ADD",
     playload:500
 });
+store.dispatch({
+    type:"SUBTRACK",
+    playload:10000
+});
