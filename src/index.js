@@ -38,7 +38,11 @@ const reducder = (state = inttailState,action)=>{
         case "ADD":
             //state += action.playload;
             state ={
-                result:state.result+=action.playload,
+                // result:state.result+=action.playload,
+                // value:state.value
+                ...state,
+                result:state.result += action.playload,
+                value:[...state.value,action.playload ]
             }
         break;
         case "SUBTRACK":
@@ -55,6 +59,10 @@ store.subscribe(function(){
     console.log("Update Store",store.getState());
 });
 
+store.dispatch({
+    type:"ADD",
+    playload:400
+});
 store.dispatch({
     type:"ADD",
     playload:15000
