@@ -3,11 +3,13 @@ class Content extends Component
 {
     render()
     {
+        const helloWorld = {
+            text: 'Welcome to the Road to learn React'
+        };
         return (
             <div>
-                <h1>Content</h1>
-                <p>{this.props.title}</p>
-                <p>{this.props.name}</p>
+                {helloWorld.text}
+                <h1>Content</h1><p>{this.props.title}{this.props.name}</p>
             </div>
 
 

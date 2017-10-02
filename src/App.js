@@ -1,24 +1,14 @@
 import React, { Component } from 'react';
-import Footer from  './set/Footer';
-import Header from  './set/Header';
-import Content from  './set/Content';
-import './App.css';
+import Content from './set/Content'
 
 class App extends Component {
+
   render() {
     return (
       <div>
-        <Footer/>
-        <Header/>
-        <Content name="Send value form App.js" tile="this is title"/>
-        <Footer/>
+            <Content  title='Dr.' name= 'Army'/>
       </div>
     );
   }
 }
-
-
-
-
-
 export default App;

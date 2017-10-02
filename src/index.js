@@ -1,73 +1,14 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import Footer from  './set/Footer';
-// import Header from  './set/Header';
-// import Content from './set/Content';
-//
-// import registerServiceWorker from './registerServiceWorker';
-//
-// import {BrowserRouter,Route,Link} from 'react-router-dom';
-//
-// ReactDOM.render(
-//  <BrowserRouter>
-//     <div>
-//     <ul>
-//
-//         <li><Link to="/header">Header</Link></li>
-//         <li><Link to="/content">Content</Link></li>
-//         <li><Link to="/footer">Footer</Link></li>
-//     </ul>
-//     <Route exact path="/" component={App} />
-//
-//     <Route path="/header" component={Header} />
-//     <Route path="/content" component={Content}/>
-//     <Route path="/footer" component={Footer}/>
-//     </div>
-// </BrowserRouter>,
-// document.getElementById('root'));﻿
-// registerServiceWorker();
-import {createStore} from "redux";
-const inttailState = {
-    result:15000,
-    value:[]
-}
-const reducder = (state = inttailState,action)=>{
-    switch (action.type) {
-        case "ADD":
-            //state += action.playload;
-            state ={
-                // result:state.result+=action.playload,
-                // value:state.value
-                ...state,
-                result:state.result += action.playload,
-                value:[...state.value,action.playload ]
-            }
-        break;
-        case "SUBTRACK":
-            //state -= action.playload;
-        break;
-        default:
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-    }
-    return state;
-}
-//const store = createStore(reducder ,15000);
-const store = createStore(reducder  );
-store.subscribe(function(){
-    console.log("Update Store",store.getState());
-});
+import App from './App';
 
-store.dispatch({
-    type:"ADD",
-    playload:400
-});
-store.dispatch({
-    type:"ADD",
-    playload:15000
-});
-// store.dispatch({
-//     type:"SUBTRACK",
-//     playload:10000
-// });
+
+import registerServiceWorker from './registerServiceWorker';
+
+
+
+ReactDOM.render(
+<App />,
+document.getElementById('root'));﻿
+registerServiceWorker();
