@@ -7,6 +7,11 @@ const incrementCount = ({incrementBy = 1} = {}) =>{
         incrementBy
     };
 };
+const resetCount = () =>{
+    return{
+        type: 'RESET',
+    };
+};
 const decrementCount = ({decrementBy  = 1 } = {}) =>{
     return{
         type: 'DECREMENT',
@@ -52,17 +57,18 @@ unsubscribe();
 //     incrementBy:6
 // });
 console.log(store.getState());
-store.dispatch(incrementCount({ incrementBy:5}));
+store.dispatch(incrementCount({ incrementBy:10}));
 
-console.log(store.getState());
-store.dispatch(decrementCount());
 
 console.log(store.getState());
 store.dispatch(decrementCount({ decrementBy:2}));
 
 console.log(store.getState());
-store.dispatch({
-    type :'DECREMENT',
-    decrementBy:5
-});
+store.dispatch(resetCount());
+
+console.log(store.getState());
+store.dispatch(decrementCount({ decrementBy:2}));
+
+
+
 console.log(store.getState());
