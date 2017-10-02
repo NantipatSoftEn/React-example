@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import redux from './redux';
+import App from './App';
 
 import registerServiceWorker from './registerServiceWorker';
 
 
 
 ReactDOM.render(
-<redux />
+<App />
 ,
 document.getElementById('root'));﻿
 registerServiceWorker();

@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import Content from './set/Content'
 
+//import redux from './redux';
+import tredux from './testredux';
 class App extends Component {
 
   render() {
     return (
       <div>
-            <Content  title='Dr.' name= 'Army'/>
+            <tredux />
       </div>
     );
   }
