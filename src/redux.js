@@ -18,7 +18,8 @@ const decrementCount = ({decrementBy  = 1 } = {}) =>{
         decrementBy
     };
 };
-const store = createStore((state = {count:0},action) => {
+
+const countReducer = (state = {count:0},action) => {
     console.log('running...');
     switch (action.type) {
         case 'INCREMENT':
@@ -37,17 +38,16 @@ const store = createStore((state = {count:0},action) => {
             default:
                 return state;
     }
-});
+};
+
+const store = createStore(countReducer);
 
 
-//
 const unsubscribe = store.subscribe(() => {
     console.log('subscribe');
     console.log(store.getState());
 });
-
 unsubscribe();
-
 // Refactoring Code
 
 // console.log(store.getState());
