@@ -1,5 +1,10 @@
 import {createStore} from 'redux';
 
+const incrementCount = () =>{
+    return{
+        type: 'INCREMENT'
+    };
+};
 const store = createStore((state = {count:0},action) => {
     console.log('running...');
     switch (action.type) {
@@ -22,6 +27,8 @@ const store = createStore((state = {count:0},action) => {
     }
 });
 
+
+//
 const unsubscribe = store.subscribe(() => {
     console.log('subscribe');
     console.log(store.getState());
@@ -35,6 +42,9 @@ store.dispatch({
     type :'INCREMENT',
     incrementBy:6
 });
+
+store.dispatch(incrementCount());
+
 console.log(store.getState());
 store.dispatch({
     type :'DECREMENT',
