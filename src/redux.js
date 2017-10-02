@@ -1,9 +1,16 @@
 import {createStore} from 'redux';
 
-const incrementCount = (payload = {}) =>{
+
+const incrementCount = ({incrementBy = 1} = {}) =>{
     return{
         type: 'INCREMENT',
-        incrementBy: typeof payload.incrementBy === 'number' ?  payload.incrementBy:1
+        incrementBy
+    };
+};
+const decrementCount = ({decrementBy  = 1 } = {}) =>{
+    return{
+        type: 'DECREMENT',
+        decrementBy
     };
 };
 const store = createStore((state = {count:0},action) => {
@@ -15,9 +22,8 @@ const store = createStore((state = {count:0},action) => {
                 count :state.count + action.incrementBy
             };
         case 'DECREMENT':
-        const decrementBy = typeof action.decrementBy === 'number'  ? action.decrementBy:1;
             return {
-                count :state.count - decrementBy
+                count :state.count - action.decrementBy
             };
         case 'RESET':
             return {
@@ -38,6 +44,7 @@ const unsubscribe = store.subscribe(() => {
 unsubscribe();
 
 // Refactoring Code
+
 // console.log(store.getState());
 //
 // store.dispatch({
@@ -48,7 +55,10 @@ console.log(store.getState());
 store.dispatch(incrementCount({ incrementBy:5}));
 
 console.log(store.getState());
-store.dispatch(incrementCount());
+store.dispatch(decrementCount());
+
+console.log(store.getState());
+store.dispatch(decrementCount({ decrementBy:2}));
 
 console.log(store.getState());
 store.dispatch({
