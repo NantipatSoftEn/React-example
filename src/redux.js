@@ -43,11 +43,11 @@ const countReducer = (state = {count:0},action) => {
 const store = createStore(countReducer);
 
 
-const unsubscribe = store.subscribe(() => {
+store.subscribe(() => {
     console.log('subscribe');
     console.log(store.getState());
 });
-unsubscribe();
+
 // Refactoring Code
 
 // console.log(store.getState());
@@ -56,19 +56,15 @@ unsubscribe();
 //     type :'INCREMENT',
 //     incrementBy:6
 // });
-console.log(store.getState());
+
 store.dispatch(incrementCount({ incrementBy:10}));
 
 
-console.log(store.getState());
+
 store.dispatch(decrementCount({ decrementBy:2}));
 
-console.log(store.getState());
+
 store.dispatch(resetCount());
 
-console.log(store.getState());
+
 store.dispatch(decrementCount({ decrementBy:2}));
-
-
-
-console.log(store.getState());
