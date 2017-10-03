@@ -1,20 +1,29 @@
 import {createStore} from "redux";
+const fADD = () => {
+    return {
+        type:"ADD",
+        money:500
+    }
+}
 
 const initialState = {
     result:1500,
     value:[],
-    s:"arm"
 }
 
 const recuder = (state = initialState,action) => {
     switch (action.type) {
         case "ADD":
-            state = {
-                ...state
+            return{
+                result:state.result+=action.money,
+                value:[action.money]
             };
-        break;
+        
         case "SUB":
-            state-=action.money;
+        state = {
+                result:state.result-=action.money,
+                value:[action.money]
+        };
         break;
         default:
     }
@@ -27,7 +36,16 @@ store.subscribe(() => {
     console.log("Update Store",store.getState());
 })
 
+
+store.dispatch(fADD());
+
+store.dispatch({
+    type:"SUB",
+    money:300
+});
+
+
 store.dispatch({
     type:"ADD",
-    money:500
+    money:2000
 });
