@@ -19,7 +19,10 @@ const decrementCount = ({decrementBy  = 1 } = {}) =>{
     };
 };
 
-const countReducer = (state = {count:0},action) => {
+const init = {
+    count:0
+}
+const countReducer = (state = init,action) => {
     console.log('running...');
     switch (action.type) {
         case 'INCREMENT':
