@@ -2,14 +2,15 @@ import {createStore} from "redux";
 
 const initialState = {
     result:1500,
-    value:[]
+    value:[],
+    s:"arm"
 }
+
 const recuder = (state = initialState,action) => {
     switch (action.type) {
         case "ADD":
             state = {
-                result:state.result,
-                value:state.value  
+                ...state
             };
         break;
         case "SUB":
@@ -19,6 +20,7 @@ const recuder = (state = initialState,action) => {
     }
     return state;
 }
+
 const store = createStore(recuder);
 
 store.subscribe(() => {
