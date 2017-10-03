@@ -51,23 +51,9 @@ store.subscribe(() => {
     console.log(store.getState());
 });
 
-// Refactoring Code
-
-// console.log(store.getState());
-//
-// store.dispatch({
-//     type :'INCREMENT',
-//     incrementBy:6
-// });
 
 store.dispatch(incrementCount({ incrementBy:10}));
 
-
-
 store.dispatch(decrementCount({ decrementBy:2}));
-
-
 store.dispatch(resetCount());
-
-
 store.dispatch(decrementCount({ decrementBy:2}));

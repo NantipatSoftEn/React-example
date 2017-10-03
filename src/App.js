@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
-//import redux from './redux';
-import ex from './redux-expensify';
-//import tredux from './testredux';
+import Nameform from './NameForm';
 class App extends Component {
 
   render() {
     return (
       <div>
-      <ex />
+      <Nameform />
       </div>
     );
   }
