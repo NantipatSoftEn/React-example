@@ -1,4 +1,4 @@
-import {createStore} from "redux";
+import {createStore,combineReducers} from "redux";
 const fADD = ({money = 100} = {}) => {
     return {
         type:"ADD",
@@ -13,6 +13,29 @@ const fSUB = () => {
     }
 }
 
+
+const fName = () => {
+    return {
+        type:"setName",
+        name:"pyp"
+    }
+}
+
+const fAge = () => {
+    return {
+        type:"setAge",
+        age: 18
+    }
+}
+
+const fShow = ({name ='mylove',age=0} = {} ) => {
+    return {
+        type:"show",
+        name:name,
+        age:age
+    }
+}
+
 const initialState = {
     result:1500,
     value:[],
@@ -20,7 +43,28 @@ const initialState = {
 
 // let obj = {money: 1000};
 // let {money: a} = obj;
+const reducer_copy = (state = {name:"arm",age:22},action) => {
+    switch (action.type) {
+        case "show":
+            return{
+                name:action.name,
+                age:action.age
+            };
+        case "setName":
+            return{
 
+                name:action.name
+            };
+
+        case "setAge":
+            state = {
+                age:action.age
+            };
+        break;
+        default:
+    }
+    return state;
+}
 const recuder = (state = initialState,action) => {
     switch (action.type) {
         case "ADD":
@@ -40,14 +84,21 @@ const recuder = (state = initialState,action) => {
     return state;
 }
 
-const store = createStore(recuder);
+const store = createStore(combineReducers({recuder,reducer_copy}));
 
 store.subscribe(() => {
     console.log("Update Store",store.getState());
 })
 
-console.log("cheak");
+
 store.dispatch(fADD({money:50}));
-store.dispatch(fADD({money:100}));
+
 store.dispatch(fSUB());
+
 store.dispatch(fADD());
+
+store.dispatch(fName());
+
+store.dispatch(fAge());
+
+store.dispatch(fShow());
