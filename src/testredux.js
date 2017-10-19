@@ -46,10 +46,8 @@ store.subscribe(() => {
     console.log("Update Store",store.getState());
 })
 
-
+console.log("cheak");
 store.dispatch(fADD({money:50}));
-
- store.dispatch(fSUB());
-
-
- store.dispatch(fADD());
+store.dispatch(fADD({money:100}));
+store.dispatch(fSUB());
+store.dispatch(fADD());
