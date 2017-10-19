@@ -1,4 +1,4 @@
-import {createStore,combineReducers} from "redux";
+import {createStore,combineReducers,applyMiddleware} from "redux";
 const fADD = ({money = 100} = {}) => {
     return {
         type:"ADD",
@@ -83,8 +83,11 @@ const recuder = (state = initialState,action) => {
     }
     return state;
 }
-
-const store = createStore(combineReducers({recuder,reducer_copy}));
+const mylogger = (store)=>(next)=>(action)=>{
+    console.log("Log Action",action);
+    next(action)
+}
+const store = createStore(combineReducers({recuder,reducer_copy}),{},applyMiddleware(mylogger));
 
 store.subscribe(() => {
     console.log("Update Store",store.getState());
