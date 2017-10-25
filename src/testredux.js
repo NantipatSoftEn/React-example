@@ -1,4 +1,5 @@
 import {createStore,combineReducers,applyMiddleware} from "redux";
+import thunk from 'redux-thunk';
 const fADD = ({money = 100} = {}) => {
     return {
         type:"ADD",
@@ -35,7 +36,10 @@ const fShow = ({name ='mylove',age=0} = {} ) => {
         age:age
     }
 }
-
+const differrence_fSUB = () => ({
+    type: "SUB",
+    money: 250
+});
 const initialState = {
     result:1500,
     value:[],
@@ -83,7 +87,7 @@ const recuder = (state = initialState,action) => {
     }
     return state;
 }
-const mylogger = (store)=>(next)=>(action)=>{
+const mylogger = store => next => action =>{
     console.log("Log Action",action);
     next(action)
 }
@@ -105,3 +109,5 @@ store.dispatch(fName());
 store.dispatch(fAge());
 
 store.dispatch(fShow());
+
+store.dispatch(differrence_fSUB ());
