@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Test from './components/Test';
-
-ReactDOM.render(<Test />,document.getElementById('app'));﻿
+import Todo from './components/Todo';
+const  jsx = (
+    <Todo  onClick='as' completed='true' text='arm'/>
+);
+ReactDOM.render(jsx,document.getElementById('app'));﻿

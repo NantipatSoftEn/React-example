@@ -1,7 +1,7 @@
 import React from 'react';
 const Test = () => (
     <div>
-        This is Testsdd sdsd
+        This is Test
     </div>
 );
 export default Test
