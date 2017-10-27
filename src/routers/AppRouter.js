@@ -5,7 +5,9 @@ import Footer from '../components/Footer';
 
 const AppRouter = () => (
     <div>
-    rfdf
+        <AppTodo />
+        <VisibilityFilter />
+        <Footer />
     </div>
 );
 
