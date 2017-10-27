@@ -89,9 +89,19 @@ const recuder = (state = initialState,action) => {
 }
 const mylogger = store => next => action =>{
     console.log("Log Action",action);
-    next(action)
+    console.log("Next ",next(action));
+
 }
-const store = createStore(combineReducers({recuder,reducer_copy}),{},applyMiddleware(mylogger));
+
+const middlewares = applyMiddleware(thunk)
+
+const store = createStore(
+    combineReducers({recuder,reducer_copy}),
+    {},
+    middlewares
+);
+
+
 
 store.subscribe(() => {
     console.log("Update Store",store.getState());
