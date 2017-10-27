@@ -2,12 +2,12 @@ import React from 'react';
 import AddTodo from '../containers/AddTodo';
 import VisibilityFilter from '../containers/VisibleTodoList';
 import Footer from '../components/Footer';
-
+import Test from '../components/Test';
 const AppRouter = () => (
     <div>
-        <AppTodo />
-        <VisibilityFilter />
-        <Footer />
+        <Test />
+        <AddTodo />
+    
     </div>
 );
 
