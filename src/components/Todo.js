@@ -12,6 +12,6 @@ const  Todo = ({onClick,completed,text}) => (
 Todo.propType = {
     onClick: PropType.func.isRequired,
     completed: PropType.bool.isRequired,
-    test: PropType.String.isRequired
+    text: PropType.String.isRequired
 }
 export default Todo;
