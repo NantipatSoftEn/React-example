@@ -1,9 +1,10 @@
 let nextTodoId = 0;
-
+let countItem = 1;
 export const addTodo  = text =>{
     return {
         type: 'ADD_TODO',
         id: nextTodoId++,
+        countItem: countItem++,
         text
     }
 }

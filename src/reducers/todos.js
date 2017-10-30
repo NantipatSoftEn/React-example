@@ -6,6 +6,7 @@ const todos = (state = [] ,action) => {
                     id:action.id,
                     text:action.text,
                     completed:false,
+                    countItem:action.countItem
                 }
             ]
         case 'TOGGLE_TODO':
