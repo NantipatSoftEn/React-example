@@ -1,4 +1,4 @@
-import {combineReducers , createStore,applyMiddleware} from 'redux';
+import {combineReducers , createStore,applyMiddleware,compose} from 'redux';
 import todos from '../reducers/todos';
 import visibilityFilter from '../reducers/visibilityFilter';
 
@@ -15,7 +15,10 @@ export default () => {
        visibilityFilter
    }),
    {},
-   middlewares
+   compose(
+      middlewares,
+      window.devToolsExtension ? window.devToolsExtension() : f => f
+    )
   );
 
   return store;
