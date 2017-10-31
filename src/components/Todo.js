@@ -8,8 +8,9 @@ const Todo = ({ onClick, completed, text ,countItem }) => (
       textDecoration: completed ? 'line-through' : 'none'
     }}
   >
-    {text}{countItem}
+    {text}
   </li>
+
 )
 
 Todo.propTypes = {

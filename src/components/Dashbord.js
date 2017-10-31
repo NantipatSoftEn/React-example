@@ -1,7 +1,7 @@
 import React from 'react';
-const Test = () => (
+const Item = () => (
     <div>
         This is countItem =
     </div>
 );
-export default Test
+export default Item

@@ -2,10 +2,10 @@ import React from 'react';
 import AddTodo from '../containers/AddTodo';
 import VisibleTodoList from '../containers/VisibleTodoList';
 import Footer from '../components/Footer';
-import Test from '../components/Test';
+import Dashbord from '../components/Dashbord';
 const AppRouter = () => (
     <div>
-        <Test />
+        <Dashbord />
         <AddTodo />
         <VisibleTodoList />
         <Footer />
