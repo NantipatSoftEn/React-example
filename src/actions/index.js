@@ -22,3 +22,11 @@ export const toggleTodo = id => {
     id
   }
 }
+
+
+export const clickTodo = (interrub)  => {
+  return {
+    type: 'CLICK_TODO',
+    interrub
+  }
+}
