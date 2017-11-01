@@ -24,7 +24,7 @@ export const toggleTodo = id => {
 }
 
 
-export const clickTodo = (interrub)  => {
+export const clickTodo = interrub  => {
   return {
     type: 'CLICK_TODO',
     interrub
