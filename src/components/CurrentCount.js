@@ -1,12 +1,12 @@
 import React, { PropTypes } from 'react';
 
-const CurrentCount = ({ count }) => (
+const CurrentCount = ({ counters }) => (
     <div>
-        CurrentCount: {count}
+        CurrentCount: {counters}
     </div>
 )
 
-// CurrentCount.propTypes = {
-//     count: PropTypes.number.isRequired
-//   };
+ // CurrentCount.propTypes = {
+ //     OnClick: PropTypes.number.isRequired
+ // };
 export default CurrentCount

@@ -2,6 +2,7 @@ import {combineReducers , createStore,applyMiddleware,compose} from 'redux';
 import todos from '../reducers/todos';
 import visibilityFilter from '../reducers/visibilityFilter';
 import counters from '../reducers/counters';
+
 const mylogger = store => next => action =>{
     console.log("Log Action",action);
     next(action);
@@ -12,7 +13,8 @@ export default () => {
   const store = createStore(
     combineReducers({
        todos,
-       visibilityFilter
+       visibilityFilter,
+       counters
    }),
    {},
    compose(

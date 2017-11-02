@@ -1,6 +1,5 @@
 let nextTodoId = 0;
 let countItem = 1;
-let CountClick = 0;
 export const addTodo  = text =>{
     return {
         type: 'ADD_TODO',
@@ -27,14 +26,13 @@ export const toggleTodo = id => {
 // CountTodo
 export const increment = ()  => {
   return {
-    type: 'INCREMENT',
-    OnClick: CountClick++
+    type: 'INCREMENT'
+
   }
 }
 
 export const decrement = ()  => {
   return {
-    type: 'DECREMENT',
-    OnClick: CountClick--
+    type: 'DECREMENT'
   }
 }

@@ -1,17 +1,9 @@
-const counters = (state = [] ,action) => {
+const counters = (state = 0 ,action) => {
     switch (action.type) {
         case 'INCREMENT' :
-          return [
-              ...state,{
-                  CountClick:action.OnClick
-              }
-          ]
+          return state + 1
          case 'DECREMENT' :
-            return [
-                ...state,{
-                    CountClick:action.OnClick
-                }
-            ]
+            return state - 1
         default:
           return state
     }

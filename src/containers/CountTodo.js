@@ -18,12 +18,5 @@ let  CountTodo = ({ dispatch }) =>{
 }
 
 
-// กำลังจะใส่ mapStateToProps แต่คิดไม่ออกที...
-const mapStateToProps =  state  => {
-    return {
-        counters: state.counters
-    }
-}
-
 CountTodo = connect()(CountTodo)
 export default CountTodo
