@@ -6,7 +6,7 @@ const CurrentCount = count =>{
     </div>
 }
 
-CurrentCount.propTypes = {
-    count: PropTypes.number.isRequired
-  };
+// CurrentCount.propTypes = {
+//     count: PropTypes.number.isRequired
+//   };
 export default CurrentCount

@@ -14,12 +14,10 @@ const todos = (state = [] ,action) => {
               ? {...todo, completed: !todo.completed}
               : todo
           )
-        case 'CLICK_TODO' :
-          return [
-              ...state,{
-                  countClick:action.interrub
-              }
-          ]
+        case 'INCREMENT' :
+          return state + 1
+        case 'DECREMENT':
+          return state - 1
         default:
           return state
     }
