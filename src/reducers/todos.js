@@ -15,7 +15,11 @@ const todos = (state = [] ,action) => {
               : todo
           )
         case 'INCREMENT' :
-          return state + 1
+          return [
+              ...state,{
+                  CountClick:action.OnClick 
+              }
+          ]
         case 'DECREMENT':
           return state - 1
         default:

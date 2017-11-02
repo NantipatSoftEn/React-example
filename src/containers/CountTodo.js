@@ -3,13 +3,12 @@ import { connect } from 'react-redux'
 import IncrementButton from '../components/IncrementButton'
 import {increment} from '../actions'
 
-const  CountTodo = () =>{
+let  CountTodo = ({ dispatch }) =>{
     return (
         <div>
-        sdsds
-        <IncrementButton />
+            <IncrementButton  OnIncrement={() => dispatch(increment())}/>
         </div>
     )
 }
-
+CountTodo = connect()(CountTodo)
 export default CountTodo
