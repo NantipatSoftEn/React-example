@@ -36,3 +36,9 @@ export const decrement = ()  => {
     type: 'DECREMENT'
   }
 }
+
+export const SHOW_COUNTERS = ()  => {
+  return {
+    type: 'DECREMENT'
+  }
+}
