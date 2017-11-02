@@ -7,6 +7,7 @@ let  CountTodo = ({ dispatch }) =>{
     return (
         <div>
             <IncrementButton  OnIncrement={() => dispatch(increment())}/>
+            
         </div>
     )
 }
