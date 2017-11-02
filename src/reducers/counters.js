@@ -1,4 +1,4 @@
-const todos = (state = [] ,action) => {
+const counters = (state = [] ,action) => {
     switch (action.type) {
         case 'ADD_TODO':
             return [
@@ -14,15 +14,15 @@ const todos = (state = [] ,action) => {
               ? {...todo, completed: !todo.completed}
               : todo
           )
-        // case 'INCREMENT' :
-        //   return [
-        //       ...state,{
-        //           CountClick:action.OnClick
-        //       }
-        //   ]
-        //
+        case 'INCREMENT' :
+          return [
+              ...state,{
+                  CountClick:action.OnClick
+              }
+          ]
+
         default:
           return state
     }
 }
-export default todos
+export default counters
