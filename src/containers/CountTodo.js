@@ -6,7 +6,7 @@ import {increment} from '../actions'
 let  CountTodo = ({ dispatch }) =>{
     return (
         <div>
-            <Button  OnIncrement={() => dispatch(increment())}/>
+            <Button OnIncrement={() => dispatch(increment())}/>
         </div>
     )
 }
