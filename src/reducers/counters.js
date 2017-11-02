@@ -6,6 +6,12 @@ const counters = (state = [] ,action) => {
                   CountClick:action.OnClick
               }
           ]
+         case 'DECREMENT' :
+            return [
+                ...state,{
+                    CountClick:action.OnClick
+                }
+            ]
         default:
           return state
     }
