@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Button from '../components/Button'
 import {increment,decrement} from '../actions'
-
+import CurrentCount from '../components/CurrentCount'
 let  CountTodo = ({ dispatch }) =>{
     return (
         <div>
@@ -19,9 +19,9 @@ let  CountTodo = ({ dispatch }) =>{
 
 
 // กำลังจะใส่ mapStateToProps แต่คิดไม่ออกที...
-const mapdispathToProps =  dispatch  => {
+const mapStateToProps =  state  => {
     return {
-
+        counters: state.counters
     }
 }
 

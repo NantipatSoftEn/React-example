@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import Dashbord from '../containers/Dashbord';
 
 import CountTodo from '../containers/CountTodo';
+import VisibleCountTodo from '../containers/VisibleCountTodo';
 const AppRouter = () => (
     <div>
         <AddTodo />
@@ -13,6 +14,7 @@ const AppRouter = () => (
         <Dashbord />
 
         <CountTodo />
+        <VisibleCountTodo />
     </div>
 );
 
