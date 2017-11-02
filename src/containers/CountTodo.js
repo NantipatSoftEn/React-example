@@ -10,5 +10,10 @@ let  CountTodo = ({ dispatch }) =>{
         </div>
     )
 }
+
+
+// กำลังจะใส่ mapStateToProps แต่คิดไม่ออกที...
+
+
 CountTodo = connect()(CountTodo)
 export default CountTodo
