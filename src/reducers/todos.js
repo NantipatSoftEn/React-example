@@ -14,13 +14,6 @@ const todos = (state = [] ,action) => {
               ? {...todo, completed: !todo.completed}
               : todo
           )
-        // case 'INCREMENT' :
-        //   return [
-        //       ...state,{
-        //           CountClick:action.OnClick
-        //       }
-        //   ]
-        //
         default:
           return state
     }
