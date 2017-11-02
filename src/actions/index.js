@@ -24,9 +24,14 @@ export const toggleTodo = id => {
 }
 
 
-export const clickTodo = interrub  => {
+export const increment = ()  => {
   return {
-    type: 'CLICK_TODO',
-    interrub
+    type: 'INCREMENT'
+  }
+}
+
+export const increment = ()  => {
+  return {
+    type: 'DECREMENT'
   }
 }

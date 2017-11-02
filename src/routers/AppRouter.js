@@ -4,7 +4,7 @@ import VisibleTodoList from '../containers/VisibleTodoList';
 import Footer from '../components/Footer';
 import Dashbord from '../containers/Dashbord';
 
-import BtnTodo from '../containers/BtnTodo'
+
 const AppRouter = () => (
     <div>
         <AddTodo />
