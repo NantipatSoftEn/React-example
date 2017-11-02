@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
-const IncrementButton = ({ OnIncrement }) => (
+const Button = ({ OnIncrement }) => (
        <button onClick={OnIncrement}>Increment</button>
 )
 
-export default IncrementButton
+export default Button
