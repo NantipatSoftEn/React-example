@@ -37,8 +37,8 @@ export const decrement = ()  => {
   }
 }
 
-export const SHOW_COUNTERS = ()  => {
+export const  showcounters = ()  => {
   return {
-    type: 'DECREMENT'
+    type: 'SHOW_COUNTERS'
   }
 }
