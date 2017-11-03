@@ -42,3 +42,10 @@ export const  reset = ()  => {
     type: 'RESET_COUNTERS',
   }
 }
+
+export const  plus = p  => {
+  return {
+    type: 'PLUS_COUNTERS',
+    p
+  }
+}

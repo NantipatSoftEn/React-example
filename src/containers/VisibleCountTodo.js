@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import CurrentCount from '../components/CurrentCount'
-
+import {plus} from '../actions'
 
 
 const mapStateToProps = state => {
@@ -12,7 +12,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-
+        p : number => {dispatch(plus(number))}
     }
 }
 

@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 const CurrentCount = ({ counters }) => (
     <div>
-        CurrentCount: {counters}
+        CurrentCount: { counters < 5 ? counters :  0}
     </div>
 )
 
