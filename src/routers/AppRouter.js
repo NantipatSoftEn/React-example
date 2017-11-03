@@ -6,6 +6,9 @@ import Dashbord from '../containers/Dashbord';
 
 import CountTodo from '../containers/CountTodo';
 import VisibleCountTodo from '../containers/VisibleCountTodo';
+
+import '../firebase/config';
+
 const AppRouter = () => (
     <div>
         <AddTodo />
