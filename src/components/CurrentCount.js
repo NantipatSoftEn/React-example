@@ -1,8 +1,11 @@
 import React, { PropTypes } from 'react';
-
-const CurrentCount = ({ counters }) => (
+import Button from '../components/Button'
+const CurrentCount = ({ counters ,p }) => (
     <div>
-        CurrentCount: { counters < 5 ? counters :  0}
+        CurrentCount: { counters != 5 ? counters :  0}
+        <Button
+            OnIncrement={() => p(20)}
+            name="Plus"/>
     </div>
 )
 

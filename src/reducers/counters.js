@@ -9,7 +9,7 @@ const counters = (state = 0 ,action) => {
         case 'PLUS_COUNTERS':
             return state + action.p
         default:
-          return state
+            return state
     }
 }
 export default counters
