@@ -10,8 +10,14 @@ const mapStateToProps = state => {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+    return {
+
+    }
+}
 
 
-const VisibleCountTodo = connect(mapStateToProps)(CurrentCount)
+
+const VisibleCountTodo = connect(mapStateToProps,mapDispatchToProps)(CurrentCount)
 
 export default VisibleCountTodo

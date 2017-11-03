@@ -7,6 +7,6 @@ const CurrentCount = ({ counters }) => (
 )
 
  // CurrentCount.propTypes = {
- //     OnClick: PropTypes.number.isRequired
+ //     counters: PropTypes.number.isRequired
  // };
 export default CurrentCount
