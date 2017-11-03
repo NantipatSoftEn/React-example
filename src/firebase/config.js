@@ -11,6 +11,20 @@ const config = {
 
  firebase.initializeApp(config);
 
- firebase.database().ref().set({
-    name:'Andrew Mead'
- });
+const database = firebase.database();
+
+database.ref().set({
+    class:'Novice',
+    lv:26,
+    jop:10,
+    location:{
+        city:'phuket',
+        country: 'United State'
+    }
+});
+
+database.ref('lv').set(27);
+database.ref('attributes').set({
+    height:73,
+    weight:150
+});
