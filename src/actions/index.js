@@ -1,5 +1,7 @@
+import database from '../firebase/config'
 let nextTodoId = 0;
 let countItem = 1;
+
 export const addTodo  = text =>{
     return {
         type: 'ADD_TODO',
@@ -7,6 +9,10 @@ export const addTodo  = text =>{
         countItem: countItem++,
         text
     }
+}
+
+export const startaddTodo = (Tododata = {}) => {
+    return ()
 }
 
 export const setVisibilityFilter = filter => {
