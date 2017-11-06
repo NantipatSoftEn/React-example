@@ -10,7 +10,6 @@ const config = {
   };
 
  firebase.initializeApp(config);
-
 const database = firebase.database();
 
 database.ref().set({
@@ -35,4 +34,15 @@ database.ref('attributes').set({
     console.log("Second set Call");
 }).catch( (e) => {
     console.log("Things didnt for the Second");
+});
+
+// database.ref('lv').remove().then(() => {
+//     console.log("data remove");
+// }).catch( (e) => {
+//     console.log("error");
+// })
+
+database.ref().update({
+    class:'Wizard',
+    jop:50
 });
