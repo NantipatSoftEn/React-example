@@ -8,7 +8,7 @@ const mylogger = store => next => action =>{
     next(action);
 }
 
-const middlewares = applyMiddleware(mylogger)
+const middlewares = applyMiddleware(mylogger,thunk)
 export default () => {
   const store = createStore(
     combineReducers({

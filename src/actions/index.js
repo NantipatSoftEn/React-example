@@ -1,19 +1,18 @@
-import database from '../firebase/config'
+import {database} from '../firebase/config'
 let nextTodoId = 0;
 let countItem = 1;
 
 export const addTodo  = text =>{
-    return {
+    const data =  {
         type: 'ADD_TODO',
-        id: nextTodoId++,
+         id: nextTodoId++,
         countItem: countItem++,
         text
     }
+    database.ref('Todo').push(data)
+    return data
 }
 
-export const startaddTodo = (Tododata = {}) => {
-    return ()
-}
 
 export const setVisibilityFilter = filter => {
   return {
