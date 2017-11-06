@@ -21,10 +21,18 @@ database.ref().set({
         city:'phuket',
         country: 'United State'
     }
+}).then( () => {
+    console.log("Data is save ");
+}).catch( (e) => {
+    console.log("This is failed.",e);
 });
 
 database.ref('lv').set(27);
 database.ref('attributes').set({
     height:73,
     weight:150
+}).then( () => {
+    console.log("Second set Call");
+}).catch( (e) => {
+    console.log("Things didnt for the Second");
 });
