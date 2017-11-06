@@ -33,6 +33,7 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack",
-    "dev-server": "webpack-dev-server --hot --inline"
+    "dev-server": "webpack-dev-server --hot --inline",
+    "test": "jest"
   }
 }
