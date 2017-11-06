@@ -10,6 +10,8 @@ const config = {
   };
 
 firebase.initializeApp(config);
+const database = firebase.database();
+export { database,firebase as default };
 // const database = firebase.database();
 //
 // database.ref().on('value',(snapshot) => {
