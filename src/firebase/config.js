@@ -10,22 +10,22 @@ const config = {
   };
 
 firebase.initializeApp(config);
-const database = firebase.database();
-
-database.ref().on('value',(snapshot) => {
-    console.log(snapshot.val());
-});
-setTimeout(() => {
-        database.ref('jop').set(51);
-},3500);
-
-setTimeout(() => {
-        database.ref('jop').set(70);
-},3500);
-
-setTimeout(() => {
-        database.ref('jop').set(99);
-},3500);
+// const database = firebase.database();
+//
+// database.ref().on('value',(snapshot) => {
+//     console.log(snapshot.val());
+// });
+// setTimeout(() => {
+//         database.ref('jop').set(51);
+// },3500);
+//
+// setTimeout(() => {
+//         database.ref('jop').set(70);
+// },3500);
+//
+// setTimeout(() => {
+//         database.ref('jop').set(99);
+// },3500);
 // database.ref('attributes/height')
 // .once('value').
 // then((snapshot) => {
